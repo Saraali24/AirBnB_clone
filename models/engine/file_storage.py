@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """FileStorage class def."""
+
 import os
 import json
 import models
@@ -14,38 +15,49 @@ from models.place import Place
 
 class FileStorage:
     """Class FileStorage"""
+
     __file_path = "file.json"
     __objects = {}
 
     def all(self):
         """Return dictionary of objects"""
+
         return FileStorage.__objects
 
     def new(self, obj):
         """Make an instance in objetcs dictionary"""
-        dictkey = "{}.{}".format(obj.__class__.__name__, obj.id)
-        FileStorage.__objects[dictkey] = obj
+        cls_name = obj.__class__.__name__
+        key_dictionary = "{}.{}".format(cls_name, obj.id)
+        FileStorage.__objects[key_dictionary] = obj
 
     def save(self):
         """serelization of objects into JSON file"""
-        serialized = {}
-        for dictkey, obj in FileStorage.__objects.items():
-            serialized[dictkey] = obj.to_dict()
-        with open(FileStorage.__file_path, 'w') as file:
-            json.dump(serialized, file)
+        str_serialized = {}
+
+        for key_dictionary, obj in FileStorage.__objects.items():
+            str_serialized[key_dictionary] = obj.to_dict()
+
+        with open(FileStorage.__file_path, 'w') as j_file:
+            json.dump(str_serialized, j_file)
 
     def reload(self):
         """Deserelization into objects"""
+
         if os.path.exists(FileStorage.__file_path):
-            with open(FileStorage.__file_path, 'r') as file:
+
+            with open(FileStorage.__file_path, 'r') as j_file:
+
                 try:
-                    serialized = json.load(file)
-                    for dictkey, obj_dict in serialized.items():
-                        class_name = obj_dict.pop("__class__", None)
-                        if class_name:
-                            obj_id = dictkey.split('.')[1]
-                            cls = getattr(models, class_name)
-                            obj = cls(**obj_dict)
-                            FileStorage.__objects[dictkey] = obj
+                    str_serialized = json.load(j_file)
+
+                    for key_dictionary, objct_dict in str_serialized.items():
+                        cls_name = objct_dict.pop("__class__", None)
+
+                        if cls_name:
+                            objct_id = key_dictionary.split('.')[1]
+                            class_s = getattr(models, cls_name)
+                            obj = class_s(**objct_dict)
+                            FileStorage.__objects[key_dictionary] = obj
+
                 except FileNotFoundError:
                     pass
