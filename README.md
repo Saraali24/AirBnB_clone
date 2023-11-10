@@ -3,7 +3,7 @@
 * Update attributes of an object
 * Destroy an object
 
-### File Descriptions
+#### File Descriptions
 [console.py](console.py) - the console contains the entry point of the command interpreter. 
 List of commands this console current supports:
 * `EOF` - exits console 
@@ -63,5 +63,5 @@ Quit command to exit the program
 ```
 
 ### Authors
-Aya Tarek [Github](https://github.com/AyaTarek95)  
-Sara Mabrouk [Github](https://github.com/Saraali24)
+Aya Tarek - [Github](https://github.com/AyaTarek95)  
+Sara Mabrouk - [Github](https://github.com/Saraali24)
