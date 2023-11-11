@@ -14,7 +14,11 @@ from models.place import Place
 
 
 class FileStorage:
-    """Class FileStorage"""
+    """Class FileStorage
+    Attributes:
+        __file_path (str): file to save objects to.
+        __objects (dict): dictionary of objects.
+    """
 
     __file_path = "file.json"
     __objects = {}

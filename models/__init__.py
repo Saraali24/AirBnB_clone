@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" the engine heart """
+"""__init__ magic method """
 from models.base_model import BaseModel
 from models.user import User
 from models.amenity import Amenity
