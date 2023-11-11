@@ -29,9 +29,9 @@ class HBNBCommand(cmd.Cmd):
         print("")
         return True
 
-    def emtpyline(self):
+    def emptyline(self):
         """ handle empty line """
-        return False
+        pass
 
     def do_create(self, argument):
         """Creates a new instance """
