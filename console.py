@@ -9,7 +9,6 @@ from models.place import Place
 from models.amenity import Amenity
 from models.review import Review
 import cmd
-import os
 from models import storage
 
 
@@ -32,7 +31,7 @@ class HBNBCommand(cmd.Cmd):
 
     def emtpyline(self):
         """ handle empty line """
-        pass
+        return False
 
     def do_create(self, argument):
         """Creates a new instance """
