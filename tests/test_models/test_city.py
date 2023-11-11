@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """
 Testing City class
+Unittest classes:
+    Test_CityModel
 """
 import unittest
 from models import *

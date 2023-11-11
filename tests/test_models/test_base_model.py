@@ -1,6 +1,11 @@
 #!/usr/bin/python3
 """unittests of BaseModel and classes
+Unittest classes:
+    TestBaseModel_instantiation
+    TestBaseModel_save
+    TestBaseModel_to_dict
 """
+
 import models
 from models.base_model import BaseModel
 import unittest

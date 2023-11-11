@@ -1,5 +1,9 @@
 #!/usr/bin/python3
-""" testing for Place class"""
+""" testing for Place class
+Unittest classes:
+    Test_Place
+"""
+
 import unittest
 from datetime import datetime
 from models import *

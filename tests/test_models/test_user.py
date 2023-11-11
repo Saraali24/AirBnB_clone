@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""Testing for User class"""
+"""Testing for User class
+Unittest classes:
+    Test_User
+"""
 
 import unittest
 from models import *

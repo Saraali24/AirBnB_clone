@@ -7,6 +7,9 @@ from datetime import datetime
 class Test_AmenityClass(unittest.TestCase):
     """
     Test Amenity Class
+
+    Unittest classes:
+    Test_AmenityClass
     """
 
     def Set_up(self):
