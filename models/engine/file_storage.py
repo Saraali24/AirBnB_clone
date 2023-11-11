@@ -45,10 +45,10 @@ class FileStorage:
 
         if os.path.exists(FileStorage.__file_path):
 
-            with open(FileStorage.__file_path, 'r') as j_file:
+            with open(FileStorage.__file_path, 'r') as file:
 
                 try:
-                    str_serialized = json.load(j_file)
+                    str_serialized = json.load(file)
 
                     for key_dictionary, objct_dict in str_serialized.items():
                         cls_name = objct_dict.pop("__class__", None)
