@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 """Testing for FileStorage class
+Unittest classes:
+    TestingFileStorage_instant
+    TestFileStorage
 """
 
 from models.engine.file_storage import FileStorage
