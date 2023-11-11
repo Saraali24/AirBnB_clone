@@ -7,7 +7,7 @@ from datetime import datetime
 
 
 class BaseModel:
-    """Define BaseModel class """
+    """Define BaseModel class"""
 
     def __init__(self, *args, **kwargs):
         """Initialize new objects """
