@@ -16,10 +16,10 @@ from models import storage
 class HBNBCommand(cmd.Cmd):
     """ hbnb command interpreter """
     prompt = "(hbnb) "
-    validClasses = {"BaseModel",
+    validClasses = ["BaseModel",
                     "User", "State",
                     "City", "Place",
-                    "Review", "Amenity"}
+                    "Review", "Amenity"]
 
     def do_quit(self, arg):
         """ exit from console """
@@ -42,7 +42,7 @@ class HBNBCommand(cmd.Cmd):
         elif argz[0] not in HBNBCommand.validClasses:
             print("** class doesn't exist **")
         else:
-            objct = eval((argz[0])())
+            objct = eval(argz[0])()
             objct.save()
             print(objct.id)
 
