@@ -5,7 +5,7 @@ Unittest classes:
 """
 
 from datetime import datetime
-from models import *
+from models.state import State
 import unittest
 
 

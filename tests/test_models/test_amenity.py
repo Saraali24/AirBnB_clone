@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-from models import *
+from models.amenity import Amenity
 import unittest
 from datetime import datetime
 

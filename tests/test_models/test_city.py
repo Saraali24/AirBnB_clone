@@ -5,7 +5,7 @@ Unittest classes:
     Test_CityModel
 """
 import unittest
-from models import *
+from models.city import City
 from datetime import datetime
 
 

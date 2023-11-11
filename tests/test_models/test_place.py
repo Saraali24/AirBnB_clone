@@ -6,7 +6,7 @@ Unittest classes:
 
 import unittest
 from datetime import datetime
-from models import *
+from models.place import Place
 
 
 class Test_Place(unittest.TestCase):

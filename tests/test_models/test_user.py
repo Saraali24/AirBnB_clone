@@ -5,7 +5,7 @@ Unittest classes:
 """
 
 import unittest
-from models import *
+from models.user import User
 from datetime import datetime
 
 

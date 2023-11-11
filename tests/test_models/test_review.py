@@ -3,8 +3,7 @@
 Unittest classes:
     Test_Review
 """
-
-from models import *
+from models.review import Review
 import unittest
 from datetime import datetime
 
