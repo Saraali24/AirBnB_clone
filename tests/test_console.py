@@ -5,7 +5,12 @@ Unittest classes:
     TestHBNBCommand_prompting
 """
 import unittest
-
+from models import storage
+from models.engine.file_storage import FileStorage
+from console import HBNBCommand
 
 class TestHBNBCommand_prompting(unittest.TestCase):
-    pass
+    """Unittests for testing prompt"""
+
+    def test_prompt_string(self):
+        self.assertEqual("(hbnb) ", HBNBCommand.prompt)
