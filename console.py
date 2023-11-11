@@ -9,7 +9,6 @@ from models.place import Place
 from models.amenity import Amenity
 from models.review import Review
 import cmd
-import os
 from models import storage
 
 
@@ -22,7 +21,7 @@ class HBNBCommand(cmd.Cmd):
                     "Review", "Amenity"]
 
     def do_quit(self, arg):
-        """ exit from console """
+        """ Quit command to exit the program """
         return True
 
     def do_EOF(self, arg):
@@ -32,7 +31,7 @@ class HBNBCommand(cmd.Cmd):
 
     def emtpyline(self):
         """ handle empty line """
-        pass
+        return False
 
     def do_create(self, argument):
         """Creates a new instance """
@@ -53,7 +52,7 @@ class HBNBCommand(cmd.Cmd):
 
         if len(argz) == 0:
             print("** class name missing **")
-        elif argz[0] not in HBNBCommand.validCls:
+        elif argz[0] not in HBNBCommand.validClasses:
             print("** class doesn't exist **")
         elif len(argz) == 1:
             print("** instance id missing **")
