@@ -1,7 +1,7 @@
 # Functionalities of this command interpreter:
 Create a new object ex a new User or a new Place
 Update attributes of an object
-Destroy an object
+Destroy an object.
 
 # File Descriptions
 console - entry point of the command interpreter
