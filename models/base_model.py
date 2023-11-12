@@ -10,7 +10,7 @@ class BaseModel:
     """Define BaseModel class"""
 
     def __init__(self, *args, **kwargs):
-        """Initialize new objects """
+        """Initialize the new objects """
 
         format_time = "%Y-%m-%dT%H:%M:%S.%f"
         self.id = str(uuid4())
