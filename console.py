@@ -30,7 +30,7 @@ class HBNBCommand(cmd.Cmd):
         return True
 
     def emptyline(self):
-        """ handle empty line """
+        """ handle the empty line """
         pass
 
     def do_create(self, argument):
